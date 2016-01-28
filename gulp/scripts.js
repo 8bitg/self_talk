@@ -7,7 +7,6 @@ var preprocess = require('gulp-preprocess');
 
 gulp.task('src/scripts', function() {
   return gulp.src([
-    './src/templates/*.js',
     './src/*.js',
     './src/features/**/*.js'
   ])
