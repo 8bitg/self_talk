@@ -3,6 +3,8 @@
 
   function config($stateProvider) {
 
+    // TODO Add a testing suite and start exploring TDD on Front End Components
+
     $stateProvider
       .state('selftalk', {
         abstract: true,
