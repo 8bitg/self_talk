@@ -20,7 +20,7 @@
       })
       .state('selftalk.view', {
         url: '',
-        template: '<div>test</div>'
+        template: '<div>Test</div>'
       });
   }
 
@@ -29,5 +29,5 @@
     .config([
       '$stateProvider',
       config
-    ])
+    ]);
 })();

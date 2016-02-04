@@ -11,6 +11,7 @@ requireDir('./gulp', {
 gulp.task('default', function() {
   runsync('src/clean',
           'src/minify-html',
+          'src/partials',
           'src/styles',
           'src/scripts');
 });
@@ -23,6 +24,10 @@ gulp.task('watch', function() {
 
   watch('src/views/*.html', function() {
     runsync('src/minify-html');
+  });
+
+  watch('src/features/**/*.html', function() {
+    runsync('src/partials');
   });
 
   watch(['src/*.js', 'src/features/**/*.js'], function() {
