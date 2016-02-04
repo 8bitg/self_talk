@@ -5,7 +5,8 @@
   angular
     .module('selfTalkApp', [
       'ui.router',
-      'angular-jwt'
+      'angular-jwt',
+      'ngMaterial'
     ]);
 
 })();

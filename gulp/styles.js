@@ -4,7 +4,7 @@ var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
 gulp.task('src/styles', function() {
-  return gulp.src('src/features/global/scss/mobile.scss')
+  return gulp.src('src/features/global/styles/scss/mobile.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/src/css/'))
     .pipe(minifycss())
