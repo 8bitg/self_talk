@@ -20,7 +20,7 @@
       })
       .state('selftalk.view', {
         url: '',
-        template: '<div>Test</div>'
+        template: '<div></div>'
       });
   }
 
