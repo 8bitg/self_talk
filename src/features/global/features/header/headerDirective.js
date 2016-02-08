@@ -10,11 +10,11 @@
 
     return {
       restrict: 'EA',
-      transclude: true,
+      replace: true,
       scope: {},
       templateUrl: '/src/features/global/features/header/header.html',
       link: function(scope, elem, attrs) {
-        scope.title = "Hello World!";
+        scope.title = "Self-Talk";
       }
     };
   }

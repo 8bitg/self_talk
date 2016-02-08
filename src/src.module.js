@@ -3,10 +3,8 @@
   'use strict';
 
   angular
-    .module('selfTalkApp', [
-      'ui.router',
-      'angular-jwt',
-      'ngMaterial'
-    ]);
-
+  .module('selfTalkApp', [
+    'ui.router',
+    'angular-jwt'
+  ]);
 })();

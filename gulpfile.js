@@ -2,6 +2,14 @@ var gulp = require('gulp');
 var runsync = require('run-sequence');
 var requireDir = require('require-dir');
 var watch = require('gulp-watch');
+var Server = require('karma').Server;
+
+gulp.task('test', function(done){
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, function() { done; }).start();
+});
 
 requireDir('./gulp', {
   recurse: true
