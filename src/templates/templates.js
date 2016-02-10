@@ -1,0 +1,2 @@
+angular.module("templates").run(["$templateCache", function($templateCache) {$templateCache.put("global/features/header/header.html","<nav class=\"container navbar-header navbar-static-top header-bar\">\n  <div class=\"pull-left col-xs-3 navbar-left btn-primary btn\" menu-button text=\"Menu\"></div>\n  <h2 class=\"col-xs-3 navbar-text\" ng-bind=\"::title\"></h2>\n</nav>\n");
+$templateCache.put("global/features/header/directives/menu-button/menuButton.html","<button ng-click=\"onClick()\">\n  {{::text}}\n</button>\n");}]);

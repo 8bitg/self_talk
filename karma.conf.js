@@ -8,7 +8,9 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'node_modules/angular-jwt/dist/angular-jwt.js',
-      'src/**/*.js'
+      'node_modules/angular-ui-router/release/angular-ui-router.js',
+      'dist/src/js/src.js',
+      'src/test/**/**.js'
     ],
 
     // list of files to exclude
@@ -50,6 +52,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   });
 };

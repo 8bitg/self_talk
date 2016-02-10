@@ -4,7 +4,7 @@ var requireDir = require('require-dir');
 var watch = require('gulp-watch');
 var Server = require('karma').Server;
 
-gulp.task('test', function(done){
+gulp.task('src/test', function(done){
   new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
@@ -15,11 +15,19 @@ requireDir('./gulp', {
   recurse: true
 });
 
+gulp.task('test', function() {
+  runsync('src/clean',
+          'src/minify-html',
+          'src/minify-partials',
+          'src/styles',
+          'src/scripts',
+          'src/test');
+});
 
 gulp.task('default', function() {
   runsync('src/clean',
           'src/minify-html',
-          'src/partials',
+          'src/minify-partials',
           'src/styles',
           'src/scripts');
 });
@@ -30,12 +38,12 @@ gulp.task('watch', function() {
     runsync('src/styles');
   });
 
-  watch('src/views/*.html', function() {
-    runsync('src/minify-html');
+  watch('src/features/**/*.html', function() {
+    runsync('src/minify-partials', 'src/scripts');
   });
 
-  watch('src/features/**/*.html', function() {
-    runsync('src/partials');
+  watch('src/views/*.html', function() {
+    runsync('src/minify-html');
   });
 
   watch(['src/*.js', 'src/features/**/*.js'], function() {

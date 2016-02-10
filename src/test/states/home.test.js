@@ -1,3 +1,0 @@
-describe('selfTalk/', function() {
-  // body...
-});
