@@ -14,7 +14,7 @@
       scope: {},
       templateUrl: 'global/features/header/header.html',
       link: function(scope, elem, attrs) {
-        scope.title = "Self-Talk";
+        scope.title = 'Self-Talk';
       }
     };
   }

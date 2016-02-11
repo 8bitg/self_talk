@@ -1,4 +1,5 @@
-describe('header-directive-test', function() {
+describe('header-directive-test', function() { 'use strict';
+
   var compile, scope, directiveElem;
 
   beforeEach(function(){
@@ -15,22 +16,23 @@ describe('header-directive-test', function() {
   function getCompiledElement() {
     var element = angular.element('<page-header></page-header>');
     var compiledElement = compile(element)(scope);
+
     scope.$digest();
 
     return compiledElement;
   }
 
-  it("should data-bind the app name into the h2 tag in the page header", function () {
+  it('should data-bind the app name into the h2 tag in the page header', function () {
     directiveElem = getCompiledElement();
-    expect(directiveElem.find('h2').text()).to.equal("Self-Talk");
+    expect(directiveElem.find('h2').text()).to.equal('Self-Talk');
   });
 
-  it("should update title in page-header's isolateScope", function () {
+  it('should update title in page-header isolateScope', function () {
     directiveElem = getCompiledElement();
     directiveElem.isolateScope().title = 'Hello World';
     scope.$digest();
 
-    expect(directiveElem.isolateScope().title).to.equal("Hello World");
+    expect(directiveElem.isolateScope().title).to.equal('Hello World');
   });
 
 });
