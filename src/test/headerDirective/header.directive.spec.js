@@ -20,7 +20,7 @@ describe('header-directive-test', function() {
     return compiledElement;
   }
 
-  it("should data-bind the app name into the page header", function () {
+  it("should data-bind the app name into the h2 tag in the page header", function () {
     directiveElem = getCompiledElement();
     expect(directiveElem.find('h2').text()).to.equal("Self-Talk");
   });

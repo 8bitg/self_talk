@@ -7,7 +7,6 @@
     .directive('menuButton', ['$window', menuButtonDirective]);
 
   function menuButtonDirective($window) {
-
     return {
       restrict: 'EA',
       replace: true,

@@ -15,7 +15,6 @@
       templateUrl: 'global/features/header/header.html',
       link: function(scope, elem, attrs) {
         scope.title = "Self-Talk";
-        console.log('Testing tests!');
       }
     };
   }
